@@ -28,7 +28,7 @@ int main() {
 
     sol.reverseArray(arr);
 
-    cout << "Reversed array: ";
+    cout << "Reversed array is : ";
     for (int num : arr) {
         cout << num << " ";
     }
