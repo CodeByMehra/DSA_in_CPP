@@ -12,3 +12,14 @@ int main(){
         cout<<endl;
     }
 }
+
+// OUTPUT: 
+// Enter the number of rows = 5 
+// *****
+// ****
+// ***
+// **
+// *
+
+// Logic= the addition of no of starts and the number of that raw is always equal to the n+1
+//         And the stars are equal to n+1 - i
