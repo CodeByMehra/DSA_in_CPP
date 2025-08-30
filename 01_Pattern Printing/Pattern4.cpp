@@ -12,3 +12,10 @@ int main(){
         cout<<endl;
     }
 }
+
+// OUTPUT:
+// Enter the number of rows = 4
+// 1
+// 13
+// 135
+// 1357
