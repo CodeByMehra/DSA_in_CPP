@@ -16,6 +16,6 @@ int main(){
     cout<<arr[0]<<endl; //can accessede with same syntax of arrays
 
     for (int i=0; i<arr.size(); i++){
-        cout<<arr[i];
+        cout<<arr[i]<<" ";
     }
 }
