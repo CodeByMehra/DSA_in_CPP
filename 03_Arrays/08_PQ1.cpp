@@ -20,7 +20,7 @@ int main(){
         if(arr[i]==x){
             index=i;
         } 
-    }cout<<index;
+    }cout<<index<<endl;
 
     //method: Backward loop
     //used int i=arr.size()-1; to get last element
