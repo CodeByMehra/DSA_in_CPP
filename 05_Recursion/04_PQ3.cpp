@@ -11,3 +11,13 @@ int main(){
     // 1 1 2 3 5 8 13 21 .......
     cout<<fibonacci(4);
 }
+
+// fibo(4)
+// ├── fibo(3)
+// │   ├── fibo(2)
+// │   │   ├── fibo(1)
+// │   │   └── fibo(0)
+// │   └── fibo(1)
+// └── fibo(2)
+//     ├── fibo(1)
+//     └── fibo(0)
