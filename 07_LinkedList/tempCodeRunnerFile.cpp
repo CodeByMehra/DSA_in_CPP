@@ -25,17 +25,6 @@ class linkedList{
         size=0;
     }
 
-    void insertAtBegin(int value){
-        node* temp= new node(value);
-        if(size==0){
-        head=tail=temp;
-    }else{
-        temp->next = head;
-        head = temp;
-    }
-    size++;
-    }
-
     void insertAtEnd(int value){
     node* temp= new node(value);
     if(size==0){
@@ -52,7 +41,6 @@ class linkedList{
         cout<<temp->value<<" ";
         temp = temp->next;
     }
-    cout<<endl;
 }
 
 };
@@ -63,7 +51,5 @@ int main(){
     list1.insertAtEnd(10);
     list1.display();
     list1.insertAtEnd(20);
-    list1.display();
-    list1.insertAtBegin(4);
     list1.display();
 }
