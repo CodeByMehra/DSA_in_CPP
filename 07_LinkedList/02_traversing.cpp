@@ -27,6 +27,6 @@ int main(){
     node* temp= a;
     while( temp!=NULL){
         cout<<temp->value<<" ";
-        temp = (temp->next);
+        temp = temp->next;
     }
 }
