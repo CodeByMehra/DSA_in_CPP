@@ -76,7 +76,7 @@ public:
         {
             node *temp = new node(value);
             node *t = head;
-            for (int i = 1; i < idx - 1; i++)
+            for (int i = 0; i < idx - 1; i++)
             {
                 t = t->next;
             }
@@ -97,8 +97,10 @@ public:
         {
             temp = temp->next;
         }
-        return temp->value;
+        cout<< temp->value<<endl;
     }
+
+
     void display()
     {
         node *temp = head;
