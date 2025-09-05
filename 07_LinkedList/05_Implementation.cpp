@@ -7,7 +7,7 @@ class node
 {
 public:
     int value;
-    node *next;
+    node* next;
     node(int value)
     {
         this->value = value;
