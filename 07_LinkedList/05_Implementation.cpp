@@ -82,6 +82,7 @@ public:
             }
             temp->next = t->next;
             t->next = temp;
+            size++;
         }
     }
 
@@ -100,6 +101,40 @@ public:
         cout<< temp->value<<endl;
     }
 
+    void deleteAtHead(){
+        head= head->next;
+        size--;
+    }
+
+    void deleteAtTail(){
+        node*temp = head;
+           while(temp->next!=tail){
+            temp= temp->next;
+           }
+           temp->next=NULL;
+           tail=temp;
+           size--;
+    }
+
+     void deleteAtIdx(int idx){
+        if(idx<0 || idx>size){
+            cout<<"Invalid index"<<endl;
+        }
+        else if(idx==0){
+            deleteAtHead();
+        }
+        else {
+           node*temp = head;
+           for(int i=0; i<idx-1; i++){
+            temp= temp->next;
+           }
+           temp->next = temp->next->next;
+           size--;
+        }
+    }
+
+   
+
 
     void display()
     {
@@ -116,13 +151,14 @@ public:
 int main(){
     linkedList list1;
     list1.insertAtEnd(10);
-    list1.display();
     list1.insertAtEnd(20);
+    list1.insertAtEnd(30);
+    list1.insertAtEnd(40);
+    list1.insertAtEnd(50);
+    list1.insertAtEnd(60);
     list1.display();
-    list1.insertAtBegin(4);
+    
+    list1.deleteAtIdx(3);
     list1.display();
-
-    list1.getAtIdx(2);
-    list1.insertAtIdx(2,5);
-    list1.display();
+    cout<<list1.size;
 }
