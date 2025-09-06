@@ -41,10 +41,11 @@ class linkedList{
         node* fast = head;
 
         for(int i=0; i<n; i++){
+            if(fast==NULL) return ;
             fast=fast->next;
         }
 
-        while(fast->next!=NULL || fast!=NULL){
+        while(fast->next!=NULL){
             fast=fast->next;
             slow=slow->next;
         }
