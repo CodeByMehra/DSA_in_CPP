@@ -38,13 +38,14 @@ class linkedList{
 
     void mid(){
         node* temp = head;
-        int count=0;
-        while(temp!=tail->next){
+        int count=1;
+        while(temp->next!=NULL){
             temp = temp->next;
             count++;
-        }
-
-        int mid= count/2;
+        }cout<<count<<endl;
+        int mid = mid= count/2;;
+        
+        cout<<"mid : "<<mid<<endl;
         node* t= head;
         for(int i=0; i<mid; i++){
             t= t->next;
@@ -69,5 +70,6 @@ int main(){
     li.insert(30);
     li.insert(40);
     li.insert(50);
+   
     li.mid();
 }
