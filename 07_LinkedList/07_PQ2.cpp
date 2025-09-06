@@ -70,6 +70,5 @@ int main(){
     li.insert(30);
     li.insert(40);
     li.insert(50);
-   
     li.mid();
 }
