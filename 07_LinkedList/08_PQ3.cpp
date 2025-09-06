@@ -1,4 +1,4 @@
-// Q: Remove Nth Node From End of List
+// Q: Remove Nth Node From End of List -- L19
 // Given the head of a linked list, remove the nth node from the end of the list and return its head.
 
 #include <iostream>
@@ -44,7 +44,7 @@ class linkedList{
             fast=fast->next;
         }
 
-        while(fast->next!=NULL){
+        while(fast->next!=NULL || fast!=NULL){
             fast=fast->next;
             slow=slow->next;
         }
@@ -60,7 +60,7 @@ class linkedList{
             cout<<temp->value<<" ";
             temp= temp->next;
         }
-        cout<<endl<<"Size : "<<size<<endl;
+        cout<<endl;
     }
 };
 
@@ -72,6 +72,6 @@ int main(){
     li.insert(40);
     li.insert(50);
     li.display();
-    li.deleteFromEnd(3);
+    li.deleteFromEnd(5);
     li.display();
 }
