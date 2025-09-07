@@ -1,4 +1,4 @@
-// Q: Remove Nth Node From End of List -- L19
+// Q: Remove Nth Node From End of List -- NOT SOLVED PROPERLY
 // Given the head of a linked list, remove the nth node from the end of the list and return its head.
 
 #include <iostream>
@@ -40,10 +40,11 @@ class linkedList{
         node* slow = head;
         node* fast = head;
 
-        for(int i=0; i<n; i++){
-            if(fast==NULL) return ;
+        for(int i=0; i<n; i++){ 
+            // if(fast==NULL) return head->next; 
             fast=fast->next;
         }
+        
 
         while(fast->next!=NULL){
             fast=fast->next;
@@ -75,4 +76,4 @@ int main(){
     li.display();
     li.deleteFromEnd(5);
     li.display();
-}
+} 
