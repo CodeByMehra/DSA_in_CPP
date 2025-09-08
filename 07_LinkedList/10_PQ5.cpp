@@ -4,21 +4,21 @@
 
 // class Solution {
 // public:
-//     ListNode* detectCycle(ListNode *head) {
-//         ListNode* slow = head;
-//         ListNode* fast = head;
-//         bool flag = false; // Initially, assume there is no cycle
+    // ListNode* detectCycle(ListNode *head) {
+    //     ListNode* slow = head;
+    //     ListNode* fast = head;
+    //     bool flag = false; // Initially, assume there is no cycle
 
-//         // Step 1: Detect if a cycle exists using slow and fast pointers
-//         while (fast != NULL && fast->next != NULL) {
-//             slow = slow->next;
-//             fast = fast->next->next;
+    //     // Step 1: Detect if a cycle exists using slow and fast pointers
+        // while (fast != NULL && fast->next != NULL) {
+        //     slow = slow->next;
+        //     fast = fast->next->next;
 
-//             if (slow == fast) {
-//                 flag = true; // Cycle detected
-//                 break;
-//             }
-//         }
+        //     if (slow == fast) {
+        //         flag = true; // Cycle detected
+        //         break;
+        //     }
+        // }
 
 //         // Step 2: If no cycle, return NULL
 //         if (flag == false) 
