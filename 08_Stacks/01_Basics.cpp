@@ -14,19 +14,20 @@ int main(){
     cout<<st.size();
     st.pop();
 
-    //to print a stack: (Reverse order)
+    //to print a stack: 
     //we have to make and xtra temporary stack to prevent the loosing of the elements
     stack <int> temp;
     while(st.size()!=0){
-        cout<<st.top();
         int x = st.top();
         st.pop();
         temp.push(x);
     }
     while(temp.size()>0){
         int y= st.top();
+        cout<<temp.top();
         st.push(y);
         temp.pop();
         int y= temp.top();
     }
+    
 }
