@@ -13,4 +13,10 @@ int main(){
     st.push(30);
     cout<<st.size();
     st.pop();
+
+    //to print a stack:
+    while(st.size()!=0){
+        cout<<st.top()<<" ";
+        st.pop();
+    }
 }
