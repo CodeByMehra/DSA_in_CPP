@@ -11,23 +11,25 @@ int main(){
     st.push(10);
     st.push(20);
     st.push(30);
-    cout<<st.size();
-    st.pop();
+    st.push(40);
+    st.push(50);
+
 
     //to print a stack: 
     //we have to make and xtra temporary stack to prevent the loosing of the elements
     stack <int> temp;
     while(st.size()!=0){
+        // cout<<st.top()<< " ";
         int x = st.top();
-        st.pop();
         temp.push(x);
+        st.pop();
     }
+    // cout<<temp.size();
     while(temp.size()>0){
-        int y= st.top();
-        cout<<temp.top();
+        cout<<temp.top()<< " ";
+        int y= temp.top();
         st.push(y);
         temp.pop();
-        int y= temp.top();
     }
     
 }
