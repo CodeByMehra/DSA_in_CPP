@@ -10,29 +10,29 @@
     //     bool flag = false; // Initially, assume there is no cycle
 
     //     // Step 1: Detect if a cycle exists using slow and fast pointers
-        // while (fast != NULL && fast->next != NULL) {
-        //     slow = slow->next;
-        //     fast = fast->next->next;
+    //     while (fast != NULL && fast->next != NULL) {
+    //         slow = slow->next;
+    //         fast = fast->next->next;
 
-        //     if (slow == fast) {
-        //         flag = true; // Cycle detected
-        //         break;
-        //     }
-        // }
+    //         if (slow == fast) {
+    //             flag = true; // Cycle detected
+    //             break;
+    //         }
+    //     }
 
-//         // Step 2: If no cycle, return NULL
-//         if (flag == false) 
-//             return NULL;
-//         else {
-//             // Step 3: Find the entry point of the cycle
-//             ListNode* temp = head;
-//             while (temp != slow) {
-//                 slow = slow->next;
-//                 temp = temp->next;
-//             }
-//             return slow; // Return the starting node of the cycle
-//         }
-//     }
+    //     // Step 2: If no cycle, return NULL
+    //     if (flag == false) 
+    //         return NULL;
+    //     else {
+    //         // Step 3: Find the entry point of the cycle
+    //         ListNode* temp = head;
+    //         while (temp != slow) {
+    //             slow = slow->next;
+    //             temp = temp->next;
+    //         }
+    //         return slow; // Return the starting node of the cycle
+    //     }
+    // }
 // };
 
 //<-------------------------------------------------------------------------------------------------->
