@@ -24,7 +24,7 @@ int main(){
         temp.push(x);
         st.pop();
     }
-    // cout<<temp.size();
+    
     while(temp.size()>0){
         cout<<temp.top()<< " ";
         int y= temp.top();
