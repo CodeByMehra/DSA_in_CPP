@@ -27,7 +27,7 @@ public:
     void pop() {
         // Check if stack is empty
         if (idx == -1) {
-            cout << "Stack is Empty!" << endl;
+            cout << "Stack is Empty!" <<endl;
             return;
         }
         idx--;   // Move index down (effectively removing top element)
