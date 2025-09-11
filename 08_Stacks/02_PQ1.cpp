@@ -20,6 +20,21 @@ void display(stack <int>& st){
     }
 }
 
+void insertAtIdx(stack<int>&st, int index,int val){
+    if(index>st.size()) return;
+    stack<int> temp;
+    for(int i=0; i=st.size()-index; i++){
+        temp.push(st.top());
+        st.pop();
+    }
+    st.push(val);
+    while(temp.size()!=0){
+        st.push(temp.top());
+        temp.pop();
+    }
+    
+}
+
 int main(){
     stack <int> st;
     st.push(10);
@@ -27,5 +42,6 @@ int main(){
     st.push(30);
     st.push(40);
     st.push(50);
+    insertAtIdx(st,2,25);
     display(st);
 }
