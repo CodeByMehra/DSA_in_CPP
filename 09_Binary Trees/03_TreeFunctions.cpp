@@ -1,4 +1,5 @@
 #include <iostream>
+#include<climits>
 using namespace std;
 
 class node{
@@ -33,7 +34,7 @@ int size(node* root){
 }
 
 int maxInTree(node* root){
-    if(root==NULL) return 0;
+    if(root==NULL) return INT_MIN;
     return max(root->val, max(maxInTree(root->left), maxInTree(root->right)));
 }
 
