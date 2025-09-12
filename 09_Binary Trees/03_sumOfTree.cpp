@@ -27,6 +27,16 @@ int sumOfTree(node* root){
     return sum;
 }
 
+int size(node* root){
+    if(root==NULL) return 0;
+    return 1 + size(root->left) + size(root->right);
+}
+
+int maxInTree(node* root){
+    if(root==NULL) return 0;
+    return max(root->val, max(maxInTree(root->left), maxInTree(root->right)));
+}
+
 int main(){
     node* a = new node(1);
     node* b = new node(2);
