@@ -15,11 +15,26 @@ class node{
     }
 };
 
-void display(node* root){
+//Pre order: - 
+void displayPre(node* root){
     if(root== NULL) return;
     cout<<root->val<<" ";
-    display(root->left);
-    display(root->right);
+    displayPre(root->left);
+    displayPre(root->right);
+}
+//Post Oder:
+void displayPost(node* root){
+    if(root== NULL) return;
+    displayPost(root->left);
+    displayPost(root->right);
+    cout<<root->val<<" ";
+}
+// In order
+void displayIn(node* root){
+    if(root== NULL) return;
+    displayIn(root->left);
+    cout<<root->val<<" ";
+    displayIn(root->right);
 }
 
 int main(){
