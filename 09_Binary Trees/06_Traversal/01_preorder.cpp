@@ -52,5 +52,5 @@ int main(){
     b->right= e;
     c->left = f;
     c->right= g;
-    display(a);
+    displayPre(a);
 }
