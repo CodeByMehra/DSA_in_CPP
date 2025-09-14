@@ -39,5 +39,5 @@ int main(){
     b->right= e;
     c->left = f;
     c->right= g;
-    displayLevel(a, 2);
+    displayLevel(a, 3);
 }
