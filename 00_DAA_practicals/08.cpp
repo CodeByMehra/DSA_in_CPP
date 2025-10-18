@@ -1,3 +1,4 @@
+//From a given vertex in a weighted connected graph, find shortest paths to other vertices using Dijkstra’s algorithm. 
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -39,9 +40,6 @@ int main() {
     int V = 5;
     vector<vector<pair<int, int>>> adj(V);
 
-    AddEdge(adj, 0, 1, 10);
-    AddEdge(adj, 0, 4, 3);
-    AddEdge(adj, 1, 2, 2);
     AddEdge(adj, 1, 4, 4);
     AddEdge(adj, 2, 3, 9);
     AddEdge(adj, 4, 1, 1);
