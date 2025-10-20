@@ -1,88 +1,68 @@
-//Write a program to implement Bellman ford algorithm. 
-#include <bits/stdc++.h> 
-using namespace std; 
-struct Edge { 
-int src, dest, weight; 
-}; 
-struct Graph { 
-int V, E; 
-struct Edge* edge; 
-}; 
-struct Graph* createGraph(int V, int E) 
-{ 
-struct Graph* graph = new Graph; 
-graph->V = V; 
-graph->E = E; 
-graph->edge = new Edge[E]; 
-return graph; 
-} 
-void printArr(int dist[], int n) 
-{ 
-printf("Vertex Distance from Source\n"); 
-for (int i = 0; i < n; ++i) 
-printf("%d \t\t %d\n", i, dist[i]); 
-} 
-void BellmanFord(struct Graph* graph, int src) 
-{ 
-int V = graph->V; 
-int E = graph->E; 
-int dist[V]; 
-for (int i = 0; i < V; i++) 
-dist[i] = INT_MAX; 
-dist[src] = 0; 
-for (int i = 1; i <= V - 1; i++) { 
-for (int j = 0; j < E; j++) { 
-int u = graph->edge[j].src;  
-int v = graph->edge[j].dest; 
-int weight = graph->edge[j].weight; 
-if (dist[u] != INT_MAX 
-&& dist[u] + weight < dist[v]) 
-dist[v] = dist[u] + weight; 
-} 
-} 
-for (int i = 0; i < E; i++) { 
-int u = graph->edge[i].src; 
-int v = graph->edge[i].dest; 
-int weight = graph->edge[i].weight; 
-if (dist[u] != INT_MAX 
-&& dist[u] + weight < dist[v]) { 
-printf("Graph contains negative weight cycle"); 
-return; 
-} 
-} 
-printArr(dist, V); 
-return; 
-} 
-int main() 
-{ 
-cout<<"Vishal Mehra \n"; 
-int V = 5; 
-int E = 8; 
-struct Graph* graph = createGraph(V, E); 
-graph->edge[0].src = 0; 
-graph->edge[0].dest = 1; 
-graph->edge[0].weight = -1; 
-graph->edge[1].src = 0; 
-graph->edge[1].dest = 2; 
-graph->edge[1].weight = 4; 
-graph->edge[2].src = 1; 
-graph->edge[2].dest = 2; 
-graph->edge[2].weight = 3; 
-graph->edge[3].src = 1; 
-graph->edge[3].dest = 3; 
-graph->edge[3].weight = 2; 
-graph->edge[4].src = 1; 
-graph->edge[4].dest = 4; 
-graph->edge[4].weight = 2; 
-graph->edge[5].src = 3; 
-graph->edge[5].dest = 2; 
-graph->edge[5].weight = 5; 
-graph->edge[6].src = 3; 
-graph->edge[6].dest = 1; 
-graph->edge[6].weight = 1; 
-graph->edge[7].src = 4; 
-graph->edge[7].dest = 3; 
-graph->edge[7].weight = -3; 
-BellmanFord(graph, 0); 
-return 0; 
-} 
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+
+// Structure to represent an edge
+struct Edge {
+    int src, dest, weight;
+};
+
+// Function to perform Bellman-Ford algorithm
+void BellmanFord(int V, int E, vector<Edge>& edges, int src) {
+    vector<int> dist(V, INT_MAX);
+    dist[src] = 0;
+
+    // Relax all edges V-1 times
+    for (int i = 1; i <= V - 1; i++) {
+        for (int j = 0; j < E; j++) {
+            int u = edges[j].src;
+            int v = edges[j].dest;
+            int weight = edges[j].weight;
+
+            if (dist[u] != INT_MAX && dist[u] + weight < dist[v]) {
+                dist[v] = dist[u] + weight;
+            }
+        }
+    }
+
+    // Check for negative weight cycle
+    for (int i = 0; i < E; i++) {
+        int u = edges[i].src;
+        int v = edges[i].dest;
+        int weight = edges[i].weight;
+
+        if (dist[u] != INT_MAX && dist[u] + weight < dist[v]) {
+            cout << "Graph contains negative weight cycle!" << endl;
+            return;
+        }
+    }
+
+    // Print shortest distances
+    cout << "Vertex Distance from Source\n";
+    for (int i = 0; i < V; i++) {
+        cout << i << "\t\t" << dist[i] << endl;
+    }
+}
+
+int main() {
+    cout << "Vishal Mehra\n";
+
+    int V = 5; // number of vertices
+    int E = 8; // number of edges
+
+    vector<Edge> edges(E);
+
+    edges[0] = {0, 1, -1};
+    edges[1] = {0, 2, 4};
+    edges[2] = {1, 2, 3};
+    edges[3] = {1, 3, 2};
+    edges[4] = {1, 4, 2};
+    edges[5] = {3, 2, 5};
+    edges[6] = {3, 1, 1};
+    edges[7] = {4, 3, -3};
+
+    BellmanFord(V, E, edges, 0);
+
+    return 0;
+}
