@@ -86,8 +86,8 @@ void breadthFirstSearch() {
 }
 
 int main() {
-    cout << "gourav" << endl;
-    cout << "2023078033" << endl;
+    cout << "Vishal Mehra" << endl;
+    cout << "20232420232" << endl;
 
     // Initialize adjacency matrix to 0
     for (int i = 0; i < MAX; i++) {

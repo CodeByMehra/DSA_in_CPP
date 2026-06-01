@@ -41,8 +41,8 @@ int main() {
 
     cout << "Maximum value in Knapsack = " << knapSack(W, w, v, n) << endl;
 
-    cout << "gourav garg" << endl;
-    cout << "2023078033" << endl;
+    cout << "Vishal Mehra" << endl;
+    cout << "2023242032" << endl;
 
     return 0;
 }

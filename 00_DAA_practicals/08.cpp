@@ -1,4 +1,6 @@
-//From a given vertex in a weighted connected graph, find shortest paths to other vertices using Dijkstra’s algorithm. 
+// From a given vertex in a weighted connected graph, 
+// find shortest paths to other vertices using Dijkstra’s algorithm.
+
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -7,12 +9,13 @@ using namespace std;
 
 void AddEdge(vector<vector<pair<int, int>>> &adj, int u, int v, int w) {
     adj[u].push_back({v, w});
-    adj[v].push_back({u, w});
+    adj[v].push_back({u, w}); // because the graph is undirected
 }
 
 void Dijkstra(vector<vector<pair<int, int>>> &adj, int V, int src) {
     vector<int> dist(V, INT_MAX);
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+
     dist[src] = 0;
     pq.push({0, src});
 
@@ -21,9 +24,9 @@ void Dijkstra(vector<vector<pair<int, int>>> &adj, int V, int src) {
         int u = pq.top().second;
         pq.pop();
 
-        for (int i = 0; i < adj[u].size(); i++) {
-            int v = adj[u][i].first;
-            int w = adj[u][i].second;
+        for (auto edge : adj[u]) {
+            int v = edge.first;
+            int w = edge.second;
 
             if (dist[v] > d + w) {
                 dist[v] = d + w;
@@ -40,13 +43,20 @@ int main() {
     int V = 5;
     vector<vector<pair<int, int>>> adj(V);
 
-    AddEdge(adj, 1, 4, 4);
-    AddEdge(adj, 2, 3, 9);
-    AddEdge(adj, 4, 1, 1);
-    AddEdge(adj, 4, 2, 8);
+    // Adding edges (connected graph)
+    AddEdge(adj, 0, 1, 2);
+    AddEdge(adj, 0, 4, 5);
+    AddEdge(adj, 1, 2, 3);
+    AddEdge(adj, 1, 3, 4);
+    AddEdge(adj, 2, 3, 6);
+    AddEdge(adj, 3, 4, 1);
 
-    Dijkstra(adj, V, 0);
-    cout << "\n";
-    cout << "Vishal Mehra" << " " << "2023242032" << " ";
+    cout << "Enter source vertex: ";
+    int src;
+    cin >> src;
+
+    Dijkstra(adj, V, src);
+
+    cout << "\nVishal Mehra 2023242032\n";
     return 0;
 }
