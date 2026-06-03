@@ -2,9 +2,9 @@
 #include <iostream>
 using namespace std;
 
-void display (int arr[]){
+void display (int a[]){
     for (int i=0; i<5; i++){
-        cout<<arr[i]; 
+        cout<<a [i]; 
     }
 }
 int main(){
