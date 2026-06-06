@@ -18,3 +18,24 @@
 // Output:
 
 // True
+
+#include <iostream>
+using namespace std;
+
+void nonDecreasing(int arr[], int size){
+
+    for(int i=0; i<size-1; i++){
+        if(arr[i]>arr[i+1]){
+        cout<<"false";
+        return;
+    }
+    }cout<<"True";
+}
+
+int main(){
+
+    int arr[]={1,2,3,3,9,4,5};
+    int size= sizeof(arr)/sizeof(arr[0]);
+    nonDecreasing(arr,size);
+    return 0;
+}
