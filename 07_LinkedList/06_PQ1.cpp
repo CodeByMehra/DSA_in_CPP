@@ -33,7 +33,7 @@ class linkedList{
             tail=temp;
         }
         size++;
-    }
+    } 
 
     void display(){
         node* temp = head;
