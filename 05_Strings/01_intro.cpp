@@ -14,6 +14,10 @@ int main(){
     getline(cin,s); // to take input along with space
     cout<<s;  
 
+    //str.substr();
+
+    int x=12345;
+    string intstring= to_string(x);
 
 
     return 0;
