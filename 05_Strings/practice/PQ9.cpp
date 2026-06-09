@@ -1,4 +1,4 @@
-// Q: Longest common prefix (Leetcode)
+// Q: Longest common prefix (Leetcode -14)
 // it is solved by first sorting the given string and then comparing common starting(prefix) characters bw first and last element
 
 // class Solution {
