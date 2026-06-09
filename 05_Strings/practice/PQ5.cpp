@@ -10,6 +10,9 @@ int main(){
     int count=0;
 
     for(int i=0; i<s.length(); i++){
+        if(s.length()==1){
+            break;                              //because if lengthwilll 1 then it give output as 1 which is wrong
+        }
         if(i==0){                               //for first index
             if(s[i]!=s[i+1]){
                 count++;
