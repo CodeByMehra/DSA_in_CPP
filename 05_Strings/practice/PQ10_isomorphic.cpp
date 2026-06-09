@@ -25,42 +25,42 @@
 
 //base case: if length of both not equal, then not isomorphic 
 
-class Solution {
-public:
-    bool isIsomorphic(string s, string t) {
+// class Solution {
+// public:
+//     bool isIsomorphic(string s, string t) {
 
-        if(s.length() != t.length())
-            return false;
+//         if(s.length() != t.length())
+//             return false;
 
-        vector<int> v(150, 1000);            //initialized vector with 1000 because difference value can reach this
+//         vector<int> v(150, 1000);            //initialized vector with 1000 because difference value can reach this
 
-        for(int i = 0; i < s.length(); i++) {   // checking from the perspective of s
+//         for(int i = 0; i < s.length(); i++) {   // checking from the perspective of s
 
-            int idx = (int)s[i];
+//             int idx = (int)s[i];
 
-            if(v[idx] == 1000)
-                v[idx] = s[i] - t[i];
+//             if(v[idx] == 1000)
+//                 v[idx] = s[i] - t[i];
 
-            else if(v[idx] != (s[i] - t[i]))
-                return false;
-        }
+//             else if(v[idx] != (s[i] - t[i]))
+//                 return false;
+//         }
 
-        // resetting the vector
+//         // resetting the vector
 
-        for(int i = 0; i < 150; i++)            
-            v[i] = 1000;
+//         for(int i = 0; i < 150; i++)            
+//             v[i] = 1000;
 
-        for(int i = 0; i < s.length(); i++) {      // checking from perspective of t
+//         for(int i = 0; i < s.length(); i++) {      // checking from perspective of t
 
-            int idx = (int)t[i];
+//             int idx = (int)t[i];
 
-            if(v[idx] == 1000)
-                v[idx] = t[i] - s[i];
+//             if(v[idx] == 1000)
+//                 v[idx] = t[i] - s[i];
 
-            else if(v[idx] != (t[i] - s[i]))
-                return false;
-        }
+//             else if(v[idx] != (t[i] - s[i]))
+//                 return false;
+//         }
 
-        return true;
-    }
-};
+//         return true;
+//     }
+// };
