@@ -14,7 +14,7 @@ int main(){
         if (marks < 35){
             cout<<"Roll number "<<i<<" Has marks less than 35"<<endl;
         }
-    }
+    } 
 
     return 0;
 }
