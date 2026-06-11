@@ -23,6 +23,13 @@ int main(){
         } cout<<endl;
     }
 
+    int size= sizeof(arr)/sizeof(arr[0][0]);
+    int rows= sizeof(arr)/sizeof(arr[0]);
+    int columns= sizeof(arr[0])/sizeof(arr[0][0]);
+    cout<<"size of array: "<<size<<endl;
+    cout<<"Number of rows: "<<rows<<endl;
+    cout<<"Number of columns: "<<columns<<endl;
+
 
     return 0;
 }
