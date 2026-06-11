@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
+    //int arr[3][3]={{1,2,3},{1,2,3},{1,2,3}};
     int m,n;
 
     cout<<"Enter number of rows :";
