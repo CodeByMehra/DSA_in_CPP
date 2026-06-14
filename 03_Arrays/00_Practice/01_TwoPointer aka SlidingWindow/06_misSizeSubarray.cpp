@@ -12,3 +12,32 @@
 
 // Why it matters:
 // This teaches the expand-and-shrink window idea.
+
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+
+void minSubArray(vector <int>& arr, int target){
+    int left=0;
+    int right = 1;
+
+    int minLength = INT_MAX;
+    while(right<arr.size()){
+        if(arr[left]+arr[right]>=target){
+            minLength = min(right-left+1, minLength);
+        }
+    }
+
+}
+
+
+
+int main() {
+
+    vector <int> arr ={2, 3, 1, 2, 4, 3};
+    int target=7;
+    minSubArray(arr, target);
+
+    return 0;
+}
