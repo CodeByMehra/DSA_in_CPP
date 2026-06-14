@@ -18,17 +18,23 @@
 #include <climits>
 using namespace std;
 
-void minSubArray(vector <int>& arr, int target){
-    int left=0;
-    int right = 1;
-
+int minSubArray(vector<int>& arr, int target) {
+    int left = 0;
+    int sum = 0;
     int minLength = INT_MAX;
-    while(right<arr.size()){
-        if(arr[left]+arr[right]>=target){
-            minLength = min(right-left+1, minLength);
+
+    for (int right = 0; right < arr.size(); right++) {
+        sum += arr[right];
+
+        while (sum >= target) {
+            minLength = min(minLength, right - left + 1);
+
+            sum -= arr[left];
+            left++;
         }
     }
 
+    return (minLength == INT_MAX) ? 0 : minLength;
 }
 
 
