@@ -12,6 +12,7 @@ int main(){
     arr.push_back(9);
 
     arr.pop_back(); //used to pop element
+    // arr.erase(element adress)  - to delete in between
 
     cout<<arr[0]<<endl; //can accessede with same syntax of arrays
 
