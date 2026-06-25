@@ -1,19 +1,17 @@
 #include <iostream>
-#include <climits>
 using namespace std;
 
-void selectionSort(int arr[], int n){
+void insertionSort(int arr[], int n){
 
     for(int i=0; i<n; i++){
-        int min = INT_MAX;
-        int minIdx;
-        for(int j=i; j<n; j++){
-            if(arr[j]<min){
-                min= arr[j];
-                minIdx= j;
+        int j=i;
+        while(j>=1){
+            if(arr[j]>=arr[j-1]) break;
+            if(arr[j]<arr[j-1]){
+                swap(arr[j], arr[j-1]);
+                j--;
             }
         }
-        swap(arr[i], arr[minIdx]);
     }
     cout<< "Sorted Array: ";
     for(int i=0; i<n; i++){
@@ -26,6 +24,6 @@ int main() {
     int arr [] = {9, 2, 4 ,1 , 3};
  
     int n = sizeof(arr)/sizeof(arr[0]);
-    selectionSort(arr,n);
+    insertionSort(arr,n);
     return 0;
 }
