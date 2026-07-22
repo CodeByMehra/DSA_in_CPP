@@ -11,4 +11,4 @@ int main(){
     cout<<"Enter the number to calculate factorial : ";
     cin>>num;
     cout<<factorial(num);
-} 
+}
