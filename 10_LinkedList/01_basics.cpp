@@ -15,5 +15,5 @@ class node{
 
 int main(){
     node a(10);
-
+ 
 }
