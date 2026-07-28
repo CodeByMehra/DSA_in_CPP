@@ -24,6 +24,15 @@ class linkedList{
         size=0;
     }
 
+    void insert(int value){
+        
+    }
+
+    void countNodes(){
+        node* temp =head;
+        
+    }
+
 };
 
 int main() {
