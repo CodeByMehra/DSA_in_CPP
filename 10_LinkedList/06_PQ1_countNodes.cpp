@@ -4,6 +4,7 @@
 using namespace std;
 
 class node{
+    public:
     int value;
     node* next;
     node(int val){
@@ -25,6 +26,21 @@ class linkedList{
     }
 
     void insert(int value){
+        node* temp ;
+        temp->value = value;
+
+        if(size==0){
+            head = tail = temp;
+            size++;
+        }
+        else{
+            tail->next = temp->next;
+            tail = temp;
+            size++;
+        }
+    }
+
+    void display(){
         
     }
 
@@ -36,6 +52,9 @@ class linkedList{
 };
 
 int main() {
+    linkedList list1;
+
+    list1.insert(10);
 
     
 
