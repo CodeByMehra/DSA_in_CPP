@@ -26,8 +26,7 @@ class linkedList{
     }
 
     void insert(int value){
-        node* temp ;
-        temp->value = value;
+        node* temp = new node(value);
 
         if(size==0){
             head = tail = temp;
@@ -41,7 +40,13 @@ class linkedList{
     }
 
     void display(){
-        
+        if (size==0){
+            cout<<"Linked list is empty!";
+        }
+        node *temp = head;
+        while(temp->next!=NULL){
+            cout<<temp->value<<" ";
+        }
     }
 
     void countNodes(){
@@ -55,6 +60,7 @@ int main() {
     linkedList list1;
 
     list1.insert(10);
+    list1.display();
 
     
 
