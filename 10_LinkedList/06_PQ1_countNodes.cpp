@@ -30,28 +30,40 @@ class linkedList{
 
         if(size==0){
             head = tail = temp;
-            size++;
         }
         else{
             tail->next = temp;
             tail = temp;
-            size++;
         }
+        size++;
     }
 
     void display(){
         if (size==0){
             cout<<"Linked list is empty!";
+            return;
         }
-        node *temp = head;
-        while(temp->next!=NULL){
+        node* temp = head;
+        while(temp !=NULL){
             cout<<temp->value<<" ";
+            temp = temp->next;
         }
     }
 
     void countNodes(){
+        if (size==0){
+            cout<<"Linked list is empty!";
+            return;
+        }
+
         node* temp =head;
-        
+        int count = 0;
+        while(temp != NULL){
+            count++;
+            temp = temp->next;
+        }
+
+        cout<<"Number of nodes: "<<count;
     }
 
 };
@@ -60,7 +72,12 @@ int main() {
     linkedList list1;
 
     list1.insert(10);
-    list1.display();
+    list1.insert(10);
+    list1.insert(10);
+    list1.insert(10);
+    list1.insert(10);
+
+    list1.countNodes();
 
     
 
