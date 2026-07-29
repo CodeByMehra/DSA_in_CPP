@@ -36,6 +36,7 @@ class linkedList{
         size++;
     }
 
+
     void deleteFromEnd(int n){
         node* slow = head;
         node* fast = head;
@@ -55,7 +56,6 @@ class linkedList{
 
     }
     
-
     void display(){
         node* temp = head;
         for(int i=0; i<size; i++){
