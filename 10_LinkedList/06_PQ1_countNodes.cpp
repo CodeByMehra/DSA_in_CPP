@@ -33,7 +33,7 @@ class linkedList{
             size++;
         }
         else{
-            tail->next = temp->next;
+            tail->next = temp;
             tail = temp;
             size++;
         }
