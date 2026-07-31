@@ -13,7 +13,7 @@
     //     ListNode* temp = head;
     //     ListNode* tail = NULL;
         
-    //     // Traverse the list to calculate its length and get the tail node
+    //     // Traverse the list to calculate its length and get  the tail node
     //     while (temp != NULL) {
     //         if (temp->next == NULL)
     //             tail = temp;  // The last node becomes the tail
