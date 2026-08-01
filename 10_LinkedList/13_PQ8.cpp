@@ -1,4 +1,4 @@
-// Merge two sorted linked lists (LC 21)
+// Merge two sorted linked lists (LC 21) EASY
 
 // Approach 1: Brute force
 // The first approach will be by using an extra space where we maintaining three pointers, one in the list one, and second in the list two, and third in the new created list where we have created it by creating a temporary node, and we will connect the next nodes respectively by comparing the nodes of list one and list two by using the pointers. And at the end, we will return the next node to the temporary node, which will act as the head of the new list.
