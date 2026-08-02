@@ -1,5 +1,28 @@
 // Merge k Sorted linked lists (LC23 Hard)
 
+
+// intuition : In this problem, we are given a vector containing the heads of **k sorted linked lists**, and our task is to merge all of them into a single sorted linked list.
+
+// To solve this, we can reuse the **merge function from the previous problem, "Merge Two Sorted Lists."**
+
+// The main idea is simple: **pick two linked lists, merge them, and put the merged list back.**
+
+// We start by taking the first two list heads from the vector. We remove these two heads from the vector and pass them to our `merge()` function. The function merges the two sorted linked lists and returns the head of the newly merged sorted list.
+
+// We then push this new head to the back of the vector.
+
+// We repeat the same process:
+// **pick two lists → merge them → push the merged list back.**
+
+// With every iteration, two lists are combined into one, so the total number of lists decreases by one.
+
+// We continue this process until the vector contains only **one list**. At that point, that remaining list is our final merged sorted linked list, so we return its head.
+
+// In short:
+
+// **Take 2 lists → Merge them → Push the result back → Repeat until only 1 list remains.**
+
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -9,6 +32,9 @@
  *     ListNode(int x) : val(x), next(nullptr) {}
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
+
+ * 
+ * 
  */
 // class Solution {
 // public:
