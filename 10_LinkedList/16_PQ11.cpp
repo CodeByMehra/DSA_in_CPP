@@ -31,12 +31,9 @@
 
 // Intuition:
 // This problem can be solved by partitioning the linked list into two separate lists and carefully manipulating the next pointers.
-
 // The main idea is to create:
-
 // A low list, containing all nodes whose values are less than x.
 // A high list, containing all nodes whose values are greater than or equal to x.
-
 // To make building these two lists easier, we create two dummy nodes, low and high. Their actual values do not matter because they are only used as starting points.
 
 // We then maintain two pointers:
