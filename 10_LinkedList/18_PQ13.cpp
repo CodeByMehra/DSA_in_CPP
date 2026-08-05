@@ -38,3 +38,10 @@
 //         return true;
 //     }
 // };
+
+
+// intuition : 
+// make a copy of given LL 
+// Revrse the copied linked list 
+// match the elements of original and copied 
+// if equal then palindrome
