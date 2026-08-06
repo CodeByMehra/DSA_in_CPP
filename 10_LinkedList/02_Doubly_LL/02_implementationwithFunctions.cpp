@@ -176,6 +176,6 @@ int main(){
     list1.display();
     
     list1.deleteAtIdx(3);
-    list1.display(); 
+    list1.display();
     cout<<list1.size;
 }
