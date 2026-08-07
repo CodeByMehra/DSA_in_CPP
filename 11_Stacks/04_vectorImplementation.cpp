@@ -15,7 +15,7 @@ public:
     // Push operation: Add element to the top of the stack
     void push(int val) {
         // No overflow condition in vector
-        v.push_back(val)
+        v.push_back(val);
     }
 
     // Pop operation: Remove top element from the stack
@@ -25,7 +25,7 @@ public:
             cout << "Stack is Empty!" <<endl;
             return;
         }
-        v.pop_back()
+        v.pop_back();
     }
 
     // Top operation: Get the top element without removing it
