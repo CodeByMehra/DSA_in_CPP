@@ -1,4 +1,4 @@
-// Stack i also a linear Data structure(LIFO)
+// Stack is also a linear Data structure(LIFO)
 // operations on stack : Push, POP, Top
 //syntax : stack <int> st;
 //implementation:- 
