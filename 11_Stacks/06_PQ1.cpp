@@ -1,4 +1,5 @@
 // Q : Balanced Brackets
+// we have to check closing bracket for every opening bracket, if closing bracket comes fiest then it will not considered as a pair
 
 #include <iostream>
 #include <stack>
