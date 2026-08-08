@@ -12,8 +12,9 @@ bool checkBalance(string str){
         if(str[i]=='('){
             st.push(str[i]);
         }
-        else if(str[i] == ')' && st.size()>0){
-            st.pop();
+        else{
+            if(st.size()==0) return false;
+            else st.pop();
         }
     }
     if(st.size()==0) return true;
